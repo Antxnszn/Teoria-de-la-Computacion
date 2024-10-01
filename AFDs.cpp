@@ -53,8 +53,8 @@ int main() {
             cerr << "Error: Estado final inválido." << endl; // ceer es para imprimir un mensaje de error evitando que el mensaje se mezcle con el flujo del archivo
             return 1;
         }
-        finales[num_final] = true;
-        lectura_efinal = true;
+        finales[num_final] = true; // Marcar el estado como final
+        lectura_efinal = true; // Indicar que se leyeron estados finales
     }
     if (!lectura_efinal) {
         cerr << "Error: No se leyeron estados finales." << endl;
