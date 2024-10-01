@@ -68,7 +68,7 @@ int main() {
             }
             cout << matriz[i][j] << " ";
             if (matriz[i][j] >= n_q || matriz[i][j] < 0) {
-                cerr << "Error: Transición inválida en estado " << i << " con símbolo " << j << endl;
+                cerr << "Error: Transicion invalida en estado " << i << " con Simbolo " << j << endl;
                 return 1;
             }
         }
@@ -97,14 +97,14 @@ int main() {
         bool cadenaValida = true;
         for (char c : cadena) {
             if (c != '0' && c != '1') {
-                cerr << "Error: Cadena inválida. Debe estar compuesta solo por 0s y 1s." << endl;
+                cerr << "Error: Cadena invalida. Debe estar compuesta solo por 0s y 1s." << endl;
                 cadenaValida = false;
                 break;
             }
             int simbolo = c - '0'; 
             int estadoAnterior = estado; // Guardar estado anterior
             estado = matriz[estado][simbolo]; // Transicion
-            cout << "Símbolo: " << c << ", Transición: " << estadoAnterior << " -> " << estado << endl;
+            cout << "Simbolo: " << c << ", Transicion: " << estadoAnterior << " -> " << estado << endl;
         }
 
         if (cadenaValida) {
